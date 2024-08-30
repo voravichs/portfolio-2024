@@ -1,11 +1,13 @@
 import Home from './Home'
 import About from './About'
 import Works from './Works'
-import Contact from './Contact'
+import HireMe from './HireMe'
+import Philosophy from "./Philosophy"
 
 export {
     Home,
     About,
     Works,
-    Contact
+    HireMe,
+    Philosophy
 }

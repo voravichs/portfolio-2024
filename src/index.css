@@ -2,6 +2,32 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+/* Bona Nova */
+
+@font-face {
+   font-family: "Bona Nova";
+   src: url("./assets/fonts/BonaNova-Italic.ttf");
+   font-weight: 400;
+   font-style: italic;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: "Bona Nova";
+   src: url("./assets/fonts/BonaNova-Regular.ttf");
+   font-weight: 400;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: "Bona Nova";
+   src: url("./assets/fonts/BonaNova-Bold.ttf");
+   font-weight: 700;
+   font-style: normal;
+   font-display: swap;
+}
+
 @font-face {
   font-family: "EightBit";
   src: url("./assets/fonts/8-bitmage.ttf");
@@ -9,8 +35,87 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "VT";
+  src: url("./assets/fonts/VT323-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Noto Sans */
+@font-face {
+  font-family: "Noto Sans";
+  src: url("./assets/fonts/NotoSans-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("./assets/fonts/NotoSans-LightItalic.ttf");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("./assets/fonts/NotoSans-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("./assets/fonts/NotoSans-Italic.ttf");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("./assets/fonts/NotoSans-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("./assets/fonts/NotoSans-BoldItalic.ttf");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Black Chancery";
+  src: url("./assets/fonts/BLKCHCRY.TTF");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   .flex-center {
     @apply flex justify-center items-center;
+  }
+  .slick-card {
+    @apply rounded-tl-3xl rounded-br-3xl border ;
+  }  
+  .tooltip-sm-dice {
+    @apply flex-center flex-col w-28 h-8 -bottom-6 scale-0 rounded bg-gray-700 p-2 text-sm font-noto-sans text-white;
+  }
+  .tooltip-xsm-b {
+    @apply flex-center flex-col h-12 -bottom-12 scale-0 rounded bg-gray-700 p-2 text-sm font-noto-sans text-white;
+  }
+  .tooltip-sm-b {
+    @apply flex-center flex-col w-60 h-20 -bottom-20 scale-0 rounded bg-gray-700 p-2 text-sm font-noto-sans text-white;
+  }
+  .tooltip-3xl-t {
+    @apply flex-center flex-col w-[500px] h-48 -top-48 scale-0 rounded bg-gray-700 p-4 text-sm font-noto-sans text-white;
   }
 }

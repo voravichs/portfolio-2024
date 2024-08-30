@@ -1,11 +1,11 @@
 import { motion } from "framer-motion"
 
-export default function Motion({text, speed}) {
+export default function Motion({textInput, speed}) {
 
     const charAnimation = {
         hidden: {
             opacity: 0,
-            y: 20
+            y: 5
         },
         shown: {
             opacity: 1,
@@ -17,7 +17,7 @@ export default function Motion({text, speed}) {
         <motion.div 
             className="flex flex-wrap"
         >
-            {text.split(" ").map((word, idx) => (
+            {textInput.split(" ").map((word, idx) => (
                 <motion.span 
                     key={idx}
                     initial="hidden"

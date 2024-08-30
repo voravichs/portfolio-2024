@@ -1,20 +1,14 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import AnimatedRoutes from "./components/AnimatedRoutes";
 
-// Pages
-import {Home, About, Works, Contact} from './pages'
+
 
 function App() {
-
   return (
     <>
-      <div className="overflow-hidden">
+      <div className="overflow-hidden h-dvh">
         <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/works" element={<Works />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
+          <AnimatedRoutes/>
         </BrowserRouter>
       </div>
     </>
