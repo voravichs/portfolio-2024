@@ -64,7 +64,7 @@ export default function Nav({activePage}) {
             {active && (
                <>
                   <motion.div 
-                     className="absolute top-0 left-0 bg-purple-400 h-full w-full md:w-2/3 lg:w-1/2 xl:w-1/3 2xl:w-1/4 drop-shadow-sexy z-30"
+                     className="absolute top-0 left-0 bg-purple-400 h-full w-full md:w-2/3 lg:w-1/2 xl:w-1/3 2xl:w-1/4 lg:drop-shadow-sexy z-30"
                      initial={{ scale: 0, originX: 0.2, originY: 0.05 }}
                      animate={{ scale: 1, originX: 0.2, originY: 0.05, transition: { duration: 0.5, ease: "easeOut" }}}
                      exit={{ scale: 0, originX: 0.2, originY: 0.05, transition: { duration: 0.25, ease: "easeIn" }}}
