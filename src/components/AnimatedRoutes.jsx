@@ -8,13 +8,18 @@ function AnimatedRoutes() {
    const location = useLocation();
    return (
       <AnimatePresence>
-         <Routes location={location} key={location.pathname}>
-               <Route path="/" element={<Home />} />
-               <Route path="/about" element={<About />} />
-               <Route path="/works" element={<Works />} />
-               <Route path="/values" element={<Philosophy />} />
-               <Route path="/hireme" element={<HireMe />} />
-         </Routes>
+         <div className="text-black lg:p-4 2xl:p-8 h-dvh relative">
+            <div className="bg-purple-200 dark:bg-purple-200 h-full relative">
+               <Routes location={location} key={location.pathname}>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/works" element={<Works />} />
+                  <Route path="/values" element={<Philosophy />} />
+                  <Route path="/hireme" element={<HireMe />} />
+               </Routes>
+            </div>
+         </div>
+         
       </AnimatePresence>
       
    )
