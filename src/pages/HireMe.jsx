@@ -232,7 +232,7 @@ export default function Philosophy() {
                animate={{ scaleY: 0, transition: { duration: 0.75, ease: "circOut" } }}
                exit={{ scaleY: 1, transition: { duration: 0.75, ease: "circIn" } }}
                style={{ originY: isPresent ? 1 : 0 }}
-               className="absolute top-0 left-0 bg-purple-300 z-50 w-full h-full"
+               className="absolute top-0 left-0 bg-purple-400 z-50 w-full h-full"
             />
          :
             <motion.div
@@ -241,7 +241,7 @@ export default function Philosophy() {
                exit={{ scaleY: 0, transition: { duration: 0.75, ease: "circIn" } }}
                onAnimationComplete={() => setCover(true)}
                style={{ originY: isPresent ? 0 : 1 }}
-               className="absolute top-0 left-0 bg-purple-300 z-50 w-full h-full"
+               className="absolute top-0 left-0 bg-purple-400 z-50 w-full h-full"
             />
          }
       </>

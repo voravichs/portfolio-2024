@@ -8,8 +8,9 @@ function AnimatedRoutes() {
    const location = useLocation();
    return (
       <AnimatePresence>
-         <div className="text-black lg:p-4 2xl:p-8 h-dvh relative">
-            <div className="bg-purple-200 dark:bg-purple-200 h-full relative">
+         <div className="fixed bg-purple-200 w-full h-dvh"></div>
+         <div className="text-black lg:p-4 2xl:p-8 relative h-dvh">
+            <div className="relative">
                <Routes location={location} key={location.pathname}>
                   <Route path="/" element={<Home />} />
                   <Route path="/about" element={<About />} />

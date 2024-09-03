@@ -48,7 +48,7 @@ export default function Home() {
             exit={{ opacity: 0, transition: {duration: 0.5, delay: 0.25 }}}
          >  
             {/* MOBILE Site Links */}
-            <motion.div className="absolute top-0 w-full h-1/3 pt-24 px-8 grid grid-rows-2 grid-cols-2 grid-flow-col font-bona-nova font-bold text-5xl sm:text-6xl xl:text-5xl text-purple-900 lg:hidden"
+            <motion.div className="absolute top-0 w-full h-2/5 pt-24 px-8 grid grid-rows-2 grid-cols-2 grid-flow-col font-bona-nova font-bold text-5xl sm:text-6xl md:text-7xl xl:text-5xl text-purple-900 lg:hidden"
                initial="hidden"
                animate="show"
                transition={{staggerChildren: 0.25, delayChildren: 2}}
@@ -125,12 +125,14 @@ export default function Home() {
                </motion.div>
                
             </motion.div>
+
             {/* Talking Head */}
-            <div className='h-5/6 pt-32 px-4 flex-center'>
+            <div className="h-dvh pt-24 pb-20 px-4 flex-center">
                <TalkingHead textInput={intro}/>
             </div>
+
             {/* Social Links */}
-            <div className="h-1/6 w-full flex-center gap-4 py-4 text-5xl md:text-6xl">
+            <div className="fixed bottom-0 w-full h-16 flex items-center justify-center md:justify-end gap-4 p-2 lg:pr-8 text-5xl">
                <a href='https://github.com/voravichs' className="text-purple-900 focus:text-purple-500">
                   <FaGithub className=' hover:text-purple-500'/>
                </a>
@@ -155,7 +157,7 @@ export default function Home() {
                animate={{ scaleY: 0, transition: { duration: 0.75, ease: "circOut" } }}
                exit={{ scaleY: 1, transition: { duration: 0.75, ease: "circIn" } }}
                style={{ originY: isPresent ? 1 : 0 }}
-               className="absolute top-0 left-0 bg-purple-300 z-50 w-full h-full"
+               className="absolute top-0 left-0 bg-purple-400 z-50 w-full h-full"
             />
          :
             <motion.div
@@ -164,7 +166,7 @@ export default function Home() {
                exit={{ scaleY: 0, transition: { duration: 0.75, ease: "circIn" } }}
                onAnimationComplete={() => setCover(true)}
                style={{ originY: isPresent ? 0 : 1 }}
-               className="absolute top-0 left-0 bg-purple-300 z-50 w-full h-full"
+               className="absolute top-0 left-0 bg-purple-400 z-50 w-full h-full"
             />
          }
       </>
