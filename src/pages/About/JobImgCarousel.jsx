@@ -20,6 +20,12 @@ export default function JobImgCarousel() {
                   className={`rounded-md drop-shadow-sexy transition-all cursor-pointer ${imgLarge ? "scale-150 lg:scale-125 translate-y-32 lg:translate-y-0" : ""}`}
                   onClick={() => setImgLarge(!imgLarge)}
                />
+               <div 
+                  className="absolute top-0 -left-12 lg:-left-16 h-full flex-center cursor-pointer z-20"
+                  onClick={() => setCaroselPos(4)}
+               >
+                  <FaChevronCircleLeft className={`text-4xl lg:text-5xl text-purple-900 hover:text-purple-500 ${imgLarge ? "hidden" : ""}`}/>   
+               </div>
                <div
                   className="absolute top-0 -right-12 lg:-right-16 h-full flex-center cursor-pointer z-20"
                   onClick={() => setCaroselPos(caroselPos + 1)}
@@ -68,7 +74,6 @@ export default function JobImgCarousel() {
                >
                   <FaChevronCircleRight className={`text-4xl lg:text-5xl text-purple-900 hover:text-purple-500 ${imgLarge ? "hidden" : ""}`}/>     
                </div>
-               
             </div>
          ) : (caroselPos == 4) ? (
             <div className="relative w-2/5 sm:w-1/2 md:w-1/3 lg:w-2/3">
@@ -84,8 +89,13 @@ export default function JobImgCarousel() {
                >
                   <FaChevronCircleLeft className={`text-4xl lg:text-5xl text-purple-900 hover:text-purple-500 ${imgLarge ? "hidden" : ""}`}/>    
                </div>
+               <div 
+                  className="absolute top-0 -right-12 lg:-right-16 h-full flex-center cursor-pointer z-20"
+                  onClick={() => setCaroselPos(1)}
+               >
+                  <FaChevronCircleRight className={`text-4xl lg:text-5xl text-purple-900 hover:text-purple-500 ${imgLarge ? "hidden" : ""}`}/>     
+               </div>
             </div>
-            
          ) : <></>}
       </>
    )

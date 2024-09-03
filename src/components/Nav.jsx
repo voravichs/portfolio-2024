@@ -27,7 +27,7 @@ export default function Nav({activePage}) {
    return (
       <>
          <div 
-            className='absolute h-32 w-1/5 xl:w-1/4 top-0 left-0 px-8 py-4 font-noto-sans cursor-pointer z-40'
+            className='absolute h-24 top-0 left-0 px-4 sm:px-8 py-4 font-noto-sans cursor-pointer z-40'
             onClick={() => setActive(!active)}
          >
             <div className="flex flex-col gap-4">
@@ -84,7 +84,12 @@ export default function Nav({activePage}) {
                               staggerChildren: 0.1,
                            }}
                         >
-                           <motion.div key={"home"} variants={stagger} className={`flex items-center w-full gap-4  ${activePage == "home" ? "text-purple-900" : "hover:text-purple-900 group"}`}>
+                           <motion.div 
+                              key={"home"} 
+                              variants={stagger} 
+                              className={`flex items-center w-full gap-4  ${activePage == "home" ? "text-purple-900" : "hover:text-purple-900 group"}`}
+                              whileTap={{ x: 8}}
+                           >
                               <FaHome className="text-5xl transition-transform group-hover:translate-x-4"/>
                               <div className={`transition-transform group-hover:translate-x-2`}>
                                  {activePage == "home" ?

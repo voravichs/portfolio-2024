@@ -10,10 +10,10 @@ export default function UnderFood() {
    }
 
    return (
-      <div className="absolute top-0 left-0 w-full h-full px-8 py-4 rounded-xl flex items-center gap-4">
+      <div className="absolute top-0 left-0 w-full h-full px-4 sm:px-8 py-4 rounded-xl flex items-center gap-4">
          <div className="w-full h-full flex-center flex-col gap-2">
             <div className="w-full h-full flex-center">
-                <img src={pixelbattle} className="lg:w-4/5 max-w-[300px] p-2 rounded border shadow-crispy"/>
+                <img src={pixelbattle} className="w-full lg:w-4/5 max-w-[300px] p-2 rounded border shadow-crispy"/>
             </div>
             <p className="text-center text-xs xl:text-sm">Browser-based role-playing game</p>
             <div className="flex-center gap-4 w-full text-4xl lg:text-3xl text-purple-500">

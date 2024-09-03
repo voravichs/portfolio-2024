@@ -15,6 +15,12 @@ export default function ArtImgCarousel() {
          {caroselPos == 1 ? (
             <div className="relative w-1/2 md:w-1/3 lg:w-2/3 flex-center">
                <TalkingHeadStatic textInput={motionText}/>   
+               <div 
+                  className="absolute top-0 -left-12 lg:-left-16 h-full flex-center cursor-pointer z-20"
+                  onClick={() => setCaroselPos(3)}
+               >
+                  <FaChevronCircleLeft className={`text-4xl lg:text-5xl text-purple-900 hover:text-purple-500 ${imgLarge ? "hidden" : ""}`}/>   
+               </div>
                <div
                   className="absolute top-0 -right-12 lg:-right-16 h-full flex-center cursor-pointer z-20"
                   onClick={() => setCaroselPos(caroselPos + 1)}
@@ -56,6 +62,12 @@ export default function ArtImgCarousel() {
                   onClick={() => setCaroselPos(caroselPos - 1)}
                >
                   <FaChevronCircleLeft className={`text-4xl lg:text-5xl text-purple-900 hover:text-purple-500 ${imgLarge ? "hidden" : ""}`}/>    
+               </div>
+               <div 
+                  className="absolute top-0 -right-12 lg:-right-16 h-full flex-center cursor-pointer z-20"
+                  onClick={() => setCaroselPos(1)}
+               >
+                  <FaChevronCircleRight className={`text-4xl lg:text-5xl text-purple-900 hover:text-purple-500 ${imgLarge ? "hidden" : ""}`}/>    
                </div>
             </div>
          ) : <></>}

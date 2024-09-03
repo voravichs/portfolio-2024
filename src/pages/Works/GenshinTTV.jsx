@@ -11,7 +11,7 @@ export default function GenshinTTV() {
     }
 
     return (
-        <div className="absolute top-0 left-0 w-full h-full px-8 py-4 rounded-xl flex items-center gap-4">
+        <div className="absolute top-0 left-0 w-full h-full px-4 sm:px-8    py-4 rounded-xl flex items-center gap-4">
             <div className="w-1/3 h-full flex-center">
                 <img src={paim} className="max-h-full p-2 rounded border shadow-crispy"/>
             </div>

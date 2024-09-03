@@ -28,9 +28,14 @@ export default function Home() {
       show: { x: 0, transition: {duration: 0.5, ease: "circOut"},}
    }
 
-   const smalllinks = {
-      hidden: { y: -50, opacity: 0 },
-      show: { y: 0, opacity: 1, transition: {duration: 0.5, ease: "circOut"},}
+   const smalllinksleft = {
+      hidden: { rotateZ: -180, x: 150, y: 150, opacity: 0 },
+      show: { rotateZ: 0, x: 0, y: 0, opacity: 1, transition: {duration: 0.75, ease: "circOut"},}
+   }
+
+   const smalllinksright = {
+      hidden: { rotateZ: 180, x: -150, y: 150, opacity: 0 },
+      show: { rotateZ: 0, x: 0, y: 0, opacity: 1, transition: {duration: 0.75, ease: "circOut"},}
    }
 
    return (
@@ -41,35 +46,33 @@ export default function Home() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1, transition: {duration: 1, delay: 0.5 }}}
                   exit={{ opacity: 0, transition: {duration: 0.5, delay: 0.25 }}}
-                  
                >  
                   {/* MOBILE Site Links */}
-                  <motion.div className="absolute top-0 w-full h-1/3 pt-24 px-8 grid grid-rows-2 grid-cols-2 font-bona-nova font-bold text-5xl sm:text-6xl xl:text-5xl text-purple-900 lg:hidden"
+                  <motion.div className="absolute top-0 w-full h-1/3 pt-24 px-8 grid grid-rows-2 grid-cols-2 grid-flow-col font-bona-nova font-bold text-5xl sm:text-6xl xl:text-5xl text-purple-900 lg:hidden"
                      initial="hidden"
                      animate="show"
-                     hover="hover"
-                     transition={{staggerChildren: 0.5, delayChildren: 2}}
+                     transition={{staggerChildren: 0.25, delayChildren: 2}}
                   >
-                     <motion.div variants={smalllinks} className="self-center justify-self-center hover:text-purple-500 group">
-                        <Link to={"/about"} className="w-full flex-center flex-col">
+                     <motion.div style={{ originX: 1, originY: 1}} variants={smalllinksleft} className="self-center justify-self-center hover:text-purple-500 group">
+                        <Link to={"/about"} className="w-full flex-center flex-col focus:text-purple-500">
                            <p className="text-base">About</p>
                            <PiPersonArmsSpreadFill className="transition-all group-hover:translate-y-2"/>
                         </Link>  
                      </motion.div>
-                     <motion.div variants={smalllinks} className="self-center justify-self-center hover:text-purple-500 group">
-                        <Link to={"/works"} className="w-full flex-center flex-col">
+                     <motion.div style={{ originX: 1, originY: 1}} variants={smalllinksleft} className="self-end justify-self-start hover:text-purple-500 group">
+                        <Link to={"/works"} className="w-full flex-center flex-col focus:text-purple-500">
                            <p className="text-base">Works</p>
                            <MdWorkHistory className="transition-all group-hover:translate-y-2"/>
                         </Link> 
                      </motion.div>
-                     <motion.div variants={smalllinks} className="self-end justify-self-start hover:text-purple-500 group">
-                        <Link to={"/values"} className="w-full flex-center flex-col">
+                     <motion.div style={{ originX: 0, originY: 1}} variants={smalllinksright} className="self-center justify-self-center hover:text-purple-500 group">
+                        <Link to={"/values"} className="w-full flex-center flex-col focus:text-purple-500">
                            <p className="text-base">My Values</p>
                            <GiStaryu className="transition-all group-hover:translate-y-2"/>
                         </Link> 
                      </motion.div>
-                     <motion.div variants={smalllinks} className="self-end justify-self-end hover:text-purple-500 group">
-                        <Link to={"/hireme"} className="w-full flex-center flex-col">
+                     <motion.div style={{ originX: 0, originY: 1}} variants={smalllinksright} className="self-end justify-self-end hover:text-purple-500 group">
+                        <Link to={"/hireme"} className="w-full flex-center flex-col focus:text-purple-500">
                            <p className="text-base">Hire Me</p>
                            <BsEnvelopePaperFill className="transition-all group-hover:translate-y-2"/>
                         </Link> 
@@ -128,14 +131,14 @@ export default function Home() {
                   </div>
                   {/* Social Links */}
                   <div className="h-1/6 w-full flex-center gap-4 py-4 text-5xl md:text-6xl">
-                     <a href='https://github.com/voravichs'>
-                        <FaGithub className='text-purple-900 hover:text-purple-500'/>
+                     <a href='https://github.com/voravichs' className="text-purple-900 focus:text-purple-500">
+                        <FaGithub className=' hover:text-purple-500'/>
                      </a>
-                     <a href='https://www.linkedin.com/in/voravich-silapachairueng/'>
-                        <FaLinkedin className='text-purple-900 hover:text-purple-500'/>
+                     <a href='https://www.linkedin.com/in/voravich-silapachairueng/' className="text-purple-900 focus:text-purple-500">
+                        <FaLinkedin className='hover:text-purple-500'/>
                      </a>
-                     <a href='https://twitter.com/bainrowz'>
-                        <BsTwitterX className='text-purple-900 hover:text-purple-500'/>
+                     <a href='https://twitter.com/voravich_s' className="text-purple-900 focus:text-purple-500">
+                        <BsTwitterX className='hover:text-purple-500'/>
                      </a>
                   </div>
                   

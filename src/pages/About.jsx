@@ -1,5 +1,5 @@
 import { AnimatePresence, motion, useIsPresent } from "framer-motion";
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Nav from "../components/Nav"
 import Hello from "./About/Hello";
 import ScrollDown from "./About/ScrollDown"
@@ -33,7 +33,6 @@ export default function About() {
       const distance = touchStart - touchEnd
       const isUpSwipe = distance > minSwipeDistance
       const isDownSwipe = distance < -minSwipeDistance
-      // if (isUpSwipe || isDownSwipe) console.log('swipe', isUpSwipe ? 'up' : 'down')
       if (isUpSwipe && current != 3) {
          setCurrent(current + 1)
       } else if (isDownSwipe && current != 0) {
@@ -50,6 +49,25 @@ export default function About() {
          setCurrent(current + 1)
       }
    }
+
+   // Up and Down
+   useEffect(() => {
+      const handleKeyDown = (e) =>{
+         const key = e.key;
+         console.log(key)
+         if (key == "ArrowUp" && current != 0) {
+            setCurrent(current - 1)
+         } else if (key == "ArrowDown" && current != 3) {
+            setCurrent(current + 1)
+         }
+      }
+
+      document.addEventListener('keydown', handleKeyDown, true);
+
+      return () => {
+         document.removeEventListener('keydown', handleKeyDown);
+      };
+   }, [current])
 
    return (
       <motion.div className="text-black p-6 h-dvh relative">

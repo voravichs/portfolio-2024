@@ -23,7 +23,7 @@ export default function TalkingHead({textInput}) {
                   {/* Box */}
                   <img src={`${textboxgif}`} className="absolute w-full max-w-[450px] "/> 
                   {/* Text */}
-                  <motion.div className="absolute font-pixel w-full px-8 pt-6  flex-center max-w-[400px] text-sm md:text-base lg:text-lg">
+                  <motion.div className="absolute font-pixel w-full px-4 sm:px-8 pt-6 flex-center max-w-[400px] text-sm md:text-base lg:text-lg xl:text-xl">
                      <MotionType textInput={textInput} speed={0.1}/>
                   </motion.div>
                </div>

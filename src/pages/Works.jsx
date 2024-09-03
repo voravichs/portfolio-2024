@@ -1,5 +1,5 @@
 import { motion, useIsPresent, AnimatePresence } from "framer-motion";
-import { useState } from "react"
+import { useState, useEffect} from "react"
 import Nav from "../components/Nav"
 import BentoBox from "../components/BentoBox";
 
@@ -52,6 +52,24 @@ export default function Works() {
       }
    }
 
+   useEffect(() => {
+      const handleKeyDown = (e) =>{
+         const key = e.key;
+         console.log(key)
+         if (key == "ArrowUp" && current != 0) {
+            setCurrent(current - 1)
+         } else if (key == "ArrowDown" && current != 4) {
+            setCurrent(current + 1)
+         }
+      }
+
+      document.addEventListener('keydown', handleKeyDown, true);
+
+      return () => {
+         document.removeEventListener('keydown', handleKeyDown);
+      };
+   }, [current])
+
    const isPresent = useIsPresent();
    return (
       <motion.div className="text-black p-8 h-dvh">
@@ -64,7 +82,7 @@ export default function Works() {
                exit={{ opacity: 0, transition: {duration: 0.5, delay: 0.25 }}}
             >
                <motion.div className="h-full">
-                  <div className="h-full flex flex-col items-center gap-6 px-8 py-4 pt-24">
+                  <div className="h-full flex flex-col items-center gap-6 px-4 sm:px-8 py-4 pt-24">
                      {/* Hello Text */}
                      <h1 className="text-5xl font-bona-nova font-bold text-purple-900">Projects</h1>
                      {/* MOBILE Panel Carousel */}
