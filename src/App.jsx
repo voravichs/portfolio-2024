@@ -6,7 +6,7 @@ import AnimatedRoutes from "./components/AnimatedRoutes";
 function App() {
   return (
     <>
-      <div className="overflow-hidden h-dvh">
+      <div className="overflow-scroll">
         <BrowserRouter>
           <AnimatedRoutes/>
         </BrowserRouter>

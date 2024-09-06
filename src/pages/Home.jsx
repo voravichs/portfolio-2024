@@ -52,6 +52,7 @@ export default function Home() {
             
             {/* MOBILE Site Links */}
             <motion.div className="absolute top-0 w-full h-2/5 pt-24 px-8 grid grid-rows-2 grid-cols-2 grid-flow-col font-bona-nova font-bold text-5xl sm:text-6xl md:text-7xl xl:text-5xl text-purple-900 lg:hidden"
+            <motion.div className="absolute top-0 w-full h-2/5 pt-24 px-8 grid grid-rows-2 grid-cols-2 grid-flow-col font-bona-nova font-bold text-5xl sm:text-6xl md:text-7xl xl:text-5xl text-purple-900 lg:hidden"
                initial="hidden"
                animate="show"
                transition={{staggerChildren: 0.25, delayChildren: 2}}
@@ -129,10 +130,13 @@ export default function Home() {
                
             </motion.div>
 
+
             {/* Talking Head */}
+            <div className="h-dvh pt-24 pb-20 px-4 flex-center">
             <div className="h-dvh pt-24 pb-20 px-4 flex-center">
                <TalkingHead textInput={intro}/>
             </div>
+
 
             {/* Social Links */}
             <div className="absolute bottom-0 w-full h-16 flex items-center justify-center md:justify-end gap-4 p-2 lg:pr-8 text-5xl xl:text-6xl">
