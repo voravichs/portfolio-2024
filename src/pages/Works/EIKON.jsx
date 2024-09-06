@@ -7,7 +7,7 @@ import Icon from '@mdi/react';
 import { mdiDiceD20 } from '@mdi/js';
 import { FaGithub, FaLink, FaExpandArrowsAlt  } from "react-icons/fa";
 import { GiMirrorMirror } from "react-icons/gi";
-import eikon from "../../assets/images/works/eikonlogoblack.png"
+import eikon from "../../assets/images/works/eikonlogowhite.png"
 import colossus from "../../assets/data/colossus";
 
 export default function EIKON() {
@@ -35,7 +35,7 @@ export default function EIKON() {
       <>
          <div className="absolute top-0 left-0 w-full h-full p-4 lg:p-8 rounded-xl flex flex-col lg:flex-row items-center gap-4">
             <div className="w-full lg:w-1/2 h-full flex flex-col justify-center gap-2">
-               <div className="lg:hidden flex-center gap-4 w-full text-4xl sm:text-5xl text-purple-500">
+               <div className="lg:hidden flex-center gap-4 w-full text-4xl md:text-5xl text-purple-500">
                   <motion.a 
                      href="https://ei-kon.vercel.app/"
                      initial="initial"
@@ -73,9 +73,9 @@ export default function EIKON() {
                   </a>
                </div>
                <div className="w-full flex-center p-2">
-                  <img src={eikon} className="w-full sm:w-2/3 lg:w-2/3 sm:max-w-[340px] lg:max-w-[375px] p-2 rounded border shadow-crispy"/>
+                  <img src={eikon} className="w-2/3 max-w-[250px] md:max-w-[375px] p-2 rounded border shadow-crispy bg-purple-500"/>
                </div>
-               <div className="flex-center flex-col gap-2 h-1/4">
+               <div className="flex-center flex-col gap-2 h-1/4 text-sm sm:text-base">
                   <p className="text-center">A character sheet builder for the ICON TTRPG</p>
                </div>
                <div className="hidden lg:flex-center gap-4 w-full text-4xl md:text-5xl text-purple-500">
@@ -120,7 +120,7 @@ export default function EIKON() {
             <div className="w-full lg:w-1/2 h-full flex-center flex-col gap-2">
                <div className="flex gap-2 h-1/2">
                   {/* Dice */}
-                  <div className="flex-center flex-col">
+                  <div className="flex-center flex-col text-sm md:text-base">
                         <p>Dice Rolling</p>
                         <div className="text-primary bg-white justify-self-center font-bold flex-center flex-col p-2 ">
                            <div>
@@ -176,7 +176,7 @@ export default function EIKON() {
                </div>
                
                {/* Modals */}
-               <div className="flex-center flex-col h-1/2 w-full">
+               <div className="flex-center flex-col h-1/2 w-full text-sm md:text-base">
                   <p>Detailed Modals</p>
                   <div className="text-primary bg-white justify-self-center font-bold flex-center flex-col p-2 h-4/5 w-4/5">
                         <div className="border border-b-[12px] h-full border-purple-300 bg-white rounded-lg flex-center flex-col text-primary text-xl text-center relative w-full md:w-1/2 lg:w-full">

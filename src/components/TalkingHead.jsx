@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import mahfacehappy from "../assets/images/mahfacestatichappy.png"
 import mahfacegif from "../assets/gifs/mahface.gif"
-import textboxgif from "../assets/gifs/textbox.gif"
+import textboxgif from "../assets/gifs/textboxtrans.gif"
 import mahblinkingface from "../assets/gifs/mahblinkingface.gif"
 
 import MotionType from "./MotionType"
@@ -46,7 +46,7 @@ export default function TalkingHead({textInput}) {
                   {/* Box */}
                   <img src={`${textboxgif}`} className="w-full max-w-[350px] lg:max-w-[400px] "/> 
                   {/* Text */}
-                  <motion.div className="absolute font-pixel w-full px-12 pt-6 flex-center max-w-[350px] lg:max-w-[400px] text-sm sm:text-base lg:text-xl text-purple-800">
+                  <motion.div className="absolute font-pixel w-full px-12 pt-6 flex-center max-w-[350px] lg:max-w-[400px] text-sm sm:text-base lg:text-xl text-purple-900">
                      <MotionType textInput={textInput} speed={0.2}/>
                   </motion.div>
                </div>

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import mahfacehappy from "../assets/images/mahfacestatichappy.png"
 import mahfacegif from "../assets/gifs/mahface.gif"
-import textboxgif from "../assets/gifs/textboxshort.gif"
+import textboxgif from "../assets/gifs/textboxshorttrans.gif"
 
 import MotionType from "./MotionType"
 
@@ -23,7 +23,7 @@ export default function TalkingHead({textInput}) {
                   {/* Box */}
                   <img src={`${textboxgif}`} className="absolute w-full max-w-[450px] "/> 
                   {/* Text */}
-                  <motion.div className="absolute font-pixel w-full px-4 sm:px-8 pt-6 flex-center max-w-[400px] text-sm md:text-base lg:text-lg xl:text-xl">
+                  <motion.div className="absolute font-pixel w-full px-4 sm:px-8 pt-8 md:pt-12 flex-center max-w-[400px] text-sm md:text-base lg:text-lg xl:text-xl text-purple-900">
                      <MotionType textInput={textInput} speed={0.1}/>
                   </motion.div>
                </div>

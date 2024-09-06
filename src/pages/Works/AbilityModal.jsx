@@ -19,7 +19,7 @@ export default function AbilityModal({ability, showModal, setShowModal}) {
             {showModal ? (
                <div className="flex-center overflow-x-hidden overflow-y-auto z-50 fixed inset-0 outline-none focus:outline-none cursor-default">
                   <motion.div 
-                     className="relative w-4/5 xl:w-3/5 z-50 mt-32 lg:mt-0 mx-auto font-noto-sans text-center text-sm 2xl:text-base"
+                     className="relative w-4/5 xl:w-3/5 z-50 mt-12 lg:mt-0 mx-auto font-noto-sans text-center text-sm 2xl:text-base"
                      initial={{ scale: 0}}
                      animate={{ scale: 1, transition: { duration: 0.2, ease: "easeOut" }}}
                      exit={{ scale: 0, transition: { duration: 0.2, ease: "easeIn" }}}

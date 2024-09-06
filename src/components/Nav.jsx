@@ -76,7 +76,7 @@ export default function Nav({activePage}) {
                   >
                      {(animateFinish && active) && (
                         <motion.div 
-                           className="w-full h-full flex flex-col gap-12 text-4xl text-white pt-40 px-8 sm:px-16" 
+                           className="w-full h-full flex flex-col gap-6 text-4xl text-white pt-40 px-8 sm:px-16" 
                            initial="hidden"
                            animate="shown"
                            transition={{

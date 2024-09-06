@@ -11,16 +11,16 @@ export default function Philosophy() {
 
    const isPresent = useIsPresent();
    return (
-      <>
+      <div className="h-full relative bg-purple-200">
          {/* Content */}
          <motion.div
-            className={`h-full flex ${active ? "items-end lg:items-center lg:justify-end" : ""} relative`}
+            className={`h-full flex ${active ? "justify-center items-end lg:items-center lg:justify-end" : ""}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: {duration: 1, delay: 0.5 }}}
             exit={{ opacity: 0, transition: {duration: 0.5, delay: 0.25 }}}
          >
             {/* Staring Head */}
-            <motion.div className={`${active ? "w-full lg:w-1/3" : "w-full"}`} layout>
+            <motion.div className={`${active ? "w-4/5 lg:w-1/3" : "w-full"}`} layout>
                <StaringHead/>   
             </motion.div>
             
@@ -189,6 +189,6 @@ export default function Philosophy() {
                className="absolute top-0 left-0 bg-purple-400 z-50 w-full h-full"
             />
          }
-      </>
+      </div>
    )
 }

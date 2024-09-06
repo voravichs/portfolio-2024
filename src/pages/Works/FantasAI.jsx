@@ -39,7 +39,7 @@ export default function FantasAI() {
    }
   return (
     <>
-      <div className="absolute top-0 left-0 w-full h-full p-8 rounded-xl">
+      <div className="absolute top-0 left-0 w-full h-full p-4 lg:p-8 rounded-xl">
          <div className="h-full flex flex-col justify-center gap-2 relative">
             <div className="flex-center flex-col gap-2 relative">
                {/* Title */}
@@ -90,7 +90,7 @@ export default function FantasAI() {
             <div className="absolute top-0 lg:left-0 flex items-center justify-around lg:flex-col gap-2 h-1/3 lg:h-full w-full lg:w-1/3">
                <motion.img 
                   src={fantasai1} 
-                  className={`w-3/5 sm:w-1/4 md:w-1/5 lg:w-1/2 max-w-[110px] self-start rounded-md drop-shadow-sexy transition-all cursor-pointer ${img1Large ? "scale-[2.5] translate-y-32 lg:translate-y-0 z-30" : ""}`}
+                  className={`w-3/5 sm:w-1/4 md:w-1/5 lg:w-1/2 max-w-[110px] self-start rounded-md drop-shadow-sexy transition-all cursor-pointer ${img1Large ? "scale-[2.5] translate-x-12 translate-y-40 lg:translate-y-0 z-30" : ""}`}
                   onClick={() => {
                      if (!enlarged) {
                         setImg1Large(!img1Large)
@@ -103,7 +103,7 @@ export default function FantasAI() {
                />
                <motion.img 
                   src={fantasai2} 
-                  className={`w-3/5 sm:w-1/4 md:w-1/5 lg:w-1/2 max-w-[110px]  self-start rounded-md drop-shadow-sexy transition-all cursor-pointer ${img2Large ? "scale-[2.5] translate-y-32 lg:translate-y-0 z-30" : ""}`}
+                  className={`w-3/5 sm:w-1/4 md:w-1/5 lg:w-1/2 max-w-[110px]  self-start rounded-md drop-shadow-sexy transition-all cursor-pointer ${img2Large ? "scale-[2.5] -translate-x-12 lg:translate-x-12 translate-y-32 lg:translate-y-0 z-30" : ""}`}
                   onClick={() => {
                      if (!enlarged) {
                         setImg2Large(!img2Large)
@@ -119,7 +119,7 @@ export default function FantasAI() {
             <div className="absolute bottom-0 lg:right-0 flex items-center justify-around lg:flex-col gap-2 h-1/3 lg:h-full w-full lg:w-1/3">
                <motion.img 
                   src={fantasai3} 
-                  className={`w-3/5 sm:w-1/4 md:w-1/5 lg:w-1/2 max-w-[110px] self-end rounded-md drop-shadow-sexy transition-all cursor-pointer ${img3Large ? "scale-[2.5] -translate-y-32 lg:translate-y-0 z-30" : ""}`}
+                  className={`w-3/5 sm:w-1/4 md:w-1/5 lg:w-1/2 max-w-[110px] self-end rounded-md drop-shadow-sexy transition-all cursor-pointer ${img3Large ? "scale-[2.5] translate-x-12 lg:-translate-x-12 -translate-y-32 lg:translate-y-0 z-30" : ""}`}
                   onClick={() => {
                      if (!enlarged) {
                         setImg3Large(!img3Large)
@@ -132,7 +132,7 @@ export default function FantasAI() {
                />
                <motion.img 
                   src={fantasai4} 
-                  className={`w-3/5 sm:w-1/4 md:w-1/5 lg:w-1/2 max-w-[110px] self-end rounded-md drop-shadow-sexy transition-all cursor-pointer ${img4Large ? "scale-[2.5] -translate-y-32 lg:translate-y-0 z-30" : ""}`}
+                  className={`w-3/5 sm:w-1/4 md:w-1/5 lg:w-1/2 max-w-[110px] self-end rounded-md drop-shadow-sexy transition-all cursor-pointer ${img4Large ? "scale-[2.5] -translate-x-12 -translate-y-32 lg:translate-y-0 z-30" : ""}`}
                   onClick={() => {
                      if (!enlarged) {
                         setImg4Large(!img4Large)

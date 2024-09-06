@@ -15,8 +15,8 @@ export default function Jobs() {
       <div className="h-full w-full lg:w-1/2 pt-48 lg:pt-0 px-8 lg:pl-12">
          <div className="flex-center flex-col gap-0 lg:gap-2 h-full">
             {/* Hello Text */}
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-light">Hello, I am a </h1>
-            <h1 className="text-2xl md:text-3xl lg:text-4xl text-center">Researcher, Designer, and Teacher</h1>
+            <h1 className="text-2xl md:text-5xl font-light">Hello, I am a </h1>
+            <h1 className="text-2xl md:text-5xl text-center">Researcher, Designer, and Teacher</h1>
             {/* Divider Bar */}
             <motion.div 
                className="w-64 h-1 bg-black my-4"
@@ -25,7 +25,7 @@ export default function Jobs() {
                transition={{ delay: 0.1, type: "spring", bounce:0.25}}
             ></motion.div>
             {/* Body */}
-            <div className="text-sm md:text-base xl:text-lg">
+            <div className="text-sm md:text-xl lg:text-lg">
                {/* MOBILE Body */}
                <div className="font-light w-full text-center relative lg:hidden">
                   {caroselPos == 1 ? (
@@ -33,14 +33,14 @@ export default function Jobs() {
                         <p className="px-8">I graduated from <span className="font-bold">Brown University</span> in 2017 with a degree in Cognitive Science. At the time, I was performing human subjects research for an honors thesis alongside my advisor in a 3D perception lab on campus. You can check out the presentation and contents of my thesis research below:</p>
                         <div className="my-4 flex-center gap-2">
                            <a href = {thesisposter} target = "_blank" rel="noreferrer"  >
-                              <HiOutlinePresentationChartLine className="text-6xl text-purple-400 hover:text-purple-600"/>
+                              <HiOutlinePresentationChartLine className="text-5xl text-purple-400 hover:text-purple-600"/>
                            </a>
                            <a href = {thesis} target = "_blank" rel="noreferrer"  >
-                              <IoIosPaper className="text-6xl text-purple-400 hover:text-purple-600"/>
+                              <IoIosPaper className="text-5xl text-purple-400 hover:text-purple-600"/>
                            </a>
                         </div>
                         <div
-                           className="absolute top-0 -right-4 h-full flex-center cursor-pointer z-30 "
+                           className="absolute top-0 -right-4 h-full flex-center cursor-pointer z-20 "
                            onClick={() => setCaroselPos(caroselPos + 1)}
                         >
                            <FaChevronCircleRight className="text-4xl lg:text-5xl text-purple-900 hover:text-purple-500 rounded-full"/>
@@ -55,7 +55,7 @@ export default function Jobs() {
                            </Link>
                         </div>
                         <div
-                           className="absolute top-0 -left-4 h-full flex-center cursor-pointer z-30 "
+                           className="absolute top-0 -left-4 h-full flex-center cursor-pointer z-20 "
                            onClick={() => setCaroselPos(caroselPos - 1)}
                         >
                            <FaChevronCircleLeft className="text-4xl lg:text-5xl text-purple-900 hover:text-purple-500 rounded-full"/>

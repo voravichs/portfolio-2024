@@ -39,14 +39,17 @@ export default function Home() {
    }
 
    return (
-      <>
+      <div className="h-full relative bg-purple-200">
          {/* Content */}
          <motion.div 
-            className="h-full relative"
+            className="h-full"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: {duration: 1, delay: 0.5 }}}
             exit={{ opacity: 0, transition: {duration: 0.5, delay: 0.25 }}}
          >  
+            {/* Nav */}
+            <Nav activePage={"home"}/>
+            
             {/* MOBILE Site Links */}
             <motion.div className="absolute top-0 w-full h-2/5 pt-24 px-8 grid grid-rows-2 grid-cols-2 grid-flow-col font-bona-nova font-bold text-5xl sm:text-6xl md:text-7xl xl:text-5xl text-purple-900 lg:hidden"
                initial="hidden"
@@ -132,7 +135,7 @@ export default function Home() {
             </div>
 
             {/* Social Links */}
-            <div className="fixed bottom-0 w-full h-16 flex items-center justify-center md:justify-end gap-4 p-2 lg:pr-8 text-5xl">
+            <div className="absolute bottom-0 w-full h-16 flex items-center justify-center md:justify-end gap-4 p-2 lg:pr-8 text-5xl xl:text-6xl">
                <a href='https://github.com/voravichs' className="text-purple-900 focus:text-purple-500">
                   <FaGithub className=' hover:text-purple-500'/>
                </a>
@@ -146,9 +149,6 @@ export default function Home() {
             
          </motion.div>
          
-         {/* Nav */}
-         <Nav activePage={"home"}/>
-
          {/* BG */}
          {cover
          ?
@@ -169,6 +169,6 @@ export default function Home() {
                className="absolute top-0 left-0 bg-purple-400 z-50 w-full h-full"
             />
          }
-      </>
+      </div>
    )
 }

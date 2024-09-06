@@ -6,8 +6,8 @@ export default function Where() {
       <div className="h-full w-full lg:w-1/2 pt-48 lg:pt-0 px-8 lg:pr-12">
          <div className="flex-center flex-col gap-0 lg:gap-2 h-full">
             {/* Hello Text */}
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-light">Hello, I am a </h1>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl text-center lg:w-1/2 2xl:w-full">Thai Immigrant</h1>
+            <h1 className="text-2xl md:text-5xl lg:text-6xl font-light">Hello, I am a </h1>
+            <h1 className="text-2xl md:text-5xl lg:text-6xl text-center lg:w-1/2 2xl:w-full">Thai Immigrant</h1>
             {/* Divider Bar */}
             <motion.div 
                className="w-64 h-1 bg-black my-4"
@@ -16,10 +16,10 @@ export default function Where() {
                transition={{ delay: 0.1, type: "spring", bounce:0.25}}
             ></motion.div>
             {/* Body */}
-            <div className="text-base lg:text-lg font-light w-full text-center">
+            <div className="text-base md:text-xl font-light w-full text-center">
                Born in <span className="font-bold">Thailand,</span> but having lived most of my life in the <span className="font-bold"> United States,</span> I am likely indistinguishable from any Asian American was raised in America from birth. I take the weight of this identity seriously: as a first generation immigrant from my family, I strove to reach great heights. 
             </div>
-            <div className="text-base lg:text-lg font-light w-full text-center">
+            <div className="text-base md:text-xl font-light w-full text-center">
                To my extended family in Thailand, I hope I am making you proud!
             </div>
          </div>

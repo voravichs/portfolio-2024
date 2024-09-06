@@ -16,10 +16,10 @@ export default function Philosophy() {
 
    const isPresent = useIsPresent();
    return (
-      <>
+      <div className="h-full relative bg-purple-200">
          {/* Content */}
          <motion.div
-            className="h-full relative font-noto-sans"
+            className="h-full font-noto-sans"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: {duration: 1, delay: 0.5 }}}
             exit={{ opacity: 0, transition: {duration: 0.5, delay: 0.25 }}}
@@ -36,7 +36,7 @@ export default function Philosophy() {
                         animate={{ x: 0, opacity: 1}}
                         transition={{ delay: 1, type: "spring", bounce:0.25}}
                      ></motion.div>
-                     <div className="flex gap-2 text-5xl">
+                     <div className="flex gap-2 text-4xl sm:text-5xl">
                         <a href="mailto:vsilapac@gmail.com" className="text-purple-900 focus:text-purple-500">
                            <MdEmail className=' hover:text-purple-500'/>
                         </a>
@@ -61,7 +61,7 @@ export default function Philosophy() {
                         animate={{ x: 0, opacity: 1}}
                         transition={{ delay: 1.5, type: "spring", bounce:0.25}}
                      ></motion.div>
-                     <p className="text-xl">Download my <a href={"https://drive.google.com/file/d/1JeojoH69CMHPaNNQyNrC3QFBDmRm_3kw/view?usp=sharing"}className="text-purple-600 hover:text-purple-400 focus:text-purple-400 cursor-pointer">resume!</a></p>   
+                     <p className="text-xl">Download my <a href={"https://drive.google.com/file/d/1DoUJH7h-_ZGEpYUH3cfBD9LgRigXKHHT/view?usp=sharing"}className="text-purple-600 hover:text-purple-400 focus:text-purple-400 cursor-pointer">resume!</a></p>   
                   </div>
                   
                </div>
@@ -122,6 +122,7 @@ export default function Philosophy() {
                            <li>- MATLAB</li>
                            <li>- MySQL</li>
                            <li>- Rust</li>
+                           <li>- Python</li>
                         </ul>
                         <div className="flex items-center gap-1 hover:text-yellow-200 cursor-pointer hover:-translate-x-2 text-xl mt-2"
                            onClick={() => setOption(0)}
@@ -244,6 +245,6 @@ export default function Philosophy() {
                className="absolute top-0 left-0 bg-purple-400 z-50 w-full h-full"
             />
          }
-      </>
+      </div>
    )
 }

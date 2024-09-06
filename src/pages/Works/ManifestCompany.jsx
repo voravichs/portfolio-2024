@@ -9,7 +9,7 @@ export default function ManifestCompany() {
             <div className="h-full flex justify-center gap-2 relative">
                {/* Title */}
                <div className="w-full flex-center flex-col gap-2 p-2">
-                  <img src={mclogo} className="p-2 rounded border shadow-crispy w-full max-w-[200px] "/>
+                  <img src={mclogo} className="p-2 rounded border shadow-crispy w-full max-w-[150px] lg:max-w-[200px] "/>
                   <p className="text-center text-sm">A Java business management game</p>
                   <a href="https://github.com/voravichs/manifest-company">
                      <FaGithub className="opacity-70 hover:opacity-100 text-5xl text-purple-500"/>
