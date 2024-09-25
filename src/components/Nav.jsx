@@ -53,7 +53,7 @@ export default function Nav({activePage}) {
                      <motion.a href='https://www.linkedin.com/in/voravich-silapachairueng/' key={"linkedin"} variants={stagger}>
                         <FaLinkedin className='text-4xl hover:text-purple-900'/>
                      </motion.a>
-                     <motion.a href='https://twitter.com/bainrowz' key={"twitter"} variants={stagger}>
+                     <motion.a href='https://twitter.com/voravich_s' key={"twitter"} variants={stagger}>
                         <BsTwitterX className='text-4xl hover:text-purple-900'/>
                      </motion.a>
                   </motion.div>
