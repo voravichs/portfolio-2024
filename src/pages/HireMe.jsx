@@ -61,7 +61,7 @@ export default function Philosophy() {
                         animate={{ x: 0, opacity: 1}}
                         transition={{ delay: 1.5, type: "spring", bounce:0.25}}
                      ></motion.div>
-                     <p className="text-xl">Download my <a href={"https://drive.google.com/file/d/1DoUJH7h-_ZGEpYUH3cfBD9LgRigXKHHT/view?usp=sharing"}className="text-purple-600 hover:text-purple-400 focus:text-purple-400 cursor-pointer">resume!</a></p>   
+                     <p className="text-xl">Download my <a href={"https://drive.google.com/file/d/1P5Wl6jl6bt7K8c18T-_qGdPu9KRqEs1S/view?usp=sharing"}className="text-purple-600 hover:text-purple-400 focus:text-purple-400 cursor-pointer">resume!</a></p>   
                   </div>
                   
                </div>
